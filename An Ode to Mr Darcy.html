@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>An Ode to Mr. Darcy</title>
+    <style>
+      body {
+        background: linear-gradient(
+          88.5deg,
+          rgb(129, 252, 255) 0.4%,
+          rgb(255, 175, 207) 49.8%,
+          rgb(255, 208, 153) 98.6%
+        );
+      }
+      h1 {
+        text-align: center;
+        color: #172c5a;
+        font-family: Arial, sans-serif;
+        font-weight: 750;
+      }
+      h2 {
+        font-weight: 450;
+        color: #172c5a;
+        text-align: center;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+      }
+      img {
+        display: block;
+        margin: 0 auto;
+        padding: 15px;
+      }
+
+      hr {
+        margin: 5px;
+      }
+      p {
+        color: #172c5a;
+        display: block;
+        text-align: center;
+        font-weight: lighter;
+        padding: 2px 20px;
+      }
+      button {
+        background: transparent;
+        color: #8e93aa;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        display: block;
+        margin: 20px auto;
+        padding: 15px 20px;
+        color: #172c5a;
+        border: 1px solid #172c5a;
+        border-radius: 30px;
+        box-shadow: 2px 5px 5px rgb(0 0 0 / 20%);
+        transition: all 200ms ease-in-out;
+      }
+
+      button:hover {
+        background: #f1c2a6;
+        color: #25262c;
+        cursor: pointer;
+      }
+      .container {
+        max-width: 600px;
+        margin: 0 auto;
+      }
+
+      h5 {
+        text-align: center;
+        font-weight: lighter;
+        font-family: "Courier New", Courier, monospace;
+        color: #32343f;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>An Ode to Mr. Darcy</h1>
+      <h2>From the 1995 BBC Adaptation of Pride and Prejudice</h2>
+      <img
+        src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/041/024/original/Mr_Darcy.jpg?1658265371"
+        alt="A woman coding"
+        width="400"
+      />
+      <hr />
+      <p>
+        <strong
+          >Have you seen the award winning BBC adaptation of Pride and
+          Prejudice?</strong
+        >
+        Released in 1995, the six-episode series based on Jane Austen's novel of
+        the same name is one of the greatest things you may ever see. Colin
+        Firth plays Mr. Darcy and no matter how many other remakes have come
+        since, he will always remain <em>THE</em> Mr. Darcy. In the image above
+        you can see a still from the infamous wet shirt scene. If you haven't
+        seen it, you simply must remedy that at your earliest convenience.
+      </p>
+      <button>Watched?</button>
+      <h5>Coded by Jessica Avelsgaard</h5>
+
+      <script>
+        function watched() {
+          let name = prompt("What is your name?");
+          let HaveWatched = prompt(
+            "How many times have you watched the 1995 BBC adaptation of Pride and Prejudice?"
+          );
+          let p = document.querySelector("p");
+          if (HaveWatched > 0) {
+            p.innerHTML =
+              "Congratulations " +
+              name +
+              "! You have excellent taste in television. If you would like to watch it again you can watch it on " +
+              "<a href='https://www.amazon.com/Pride-Prejudice-Season-1/dp/B0083IJKUW'target=_blank>AmazonPrime.</a>";
+          } else {
+            p.innerHTML =
+              "You should definitely watch the 1995 adaptation of Pride and Prejudice, " +
+              name +
+              "! It's available now on " +
+              "<a href='https://www.amazon.com/Pride-Prejudice-Season-1/dp/B0083IJKUW'target=_blank>AmazonPrime.</a>";
+          }
+        }
+        let watchedbutton = document.querySelector("button");
+
+        watchedbutton.addEventListener("click", watched);
+      </script>
+    </div>
+  </body>
+</html>
